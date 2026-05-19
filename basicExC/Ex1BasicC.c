@@ -6,13 +6,15 @@ void factorial();
 bool palindrom(int n);
 bool isPrime(int number);
 bool digitsAcsendingOrder(int number);
+int reverseNumber (int number);
 
 
 int main()
 {
     
-    factorial();
-    printf("Is 1221 a palindrome? %s\n", palindrom(1221) ? "Yes" : "No");
+   // factorial();
+   // printf("Is 1221 a palindrome? %s\n", palindrom(1221) ? "Yes" : "No");
+    printf("%d\n",reverseNumber(11111234));
     return 0;
 }
 
@@ -70,9 +72,39 @@ bool isPrime(int number){
 }
 
 
-bool digitsAcsendingOrder(int number){}
+bool digitsAcsendingOrder(int number){
+    bool flag = 1;
+    int digit;
+    int secondigit;
 
-void reverseNumber(int number){}
+    while(number > 0){
+        digit = number % 10;
+        number = number / 10;
+        if (digit > 0)
+        {
+            secondigit = number % 10;
+            if (digit < secondigit) {flag = false;} 
+        }
+        number = number / 10;
+
+    }
+    return flag;
+}
+
+int reverseNumber(int number){
+
+    int reverse = 0;
+    int digit;
+
+    while (number != 0)
+    {
+        digit = number % 10;
+        reverse = reverse * 10 + digit;
+        number /= 10;
+    }
+
+    return reverse;
+}
 
 
 
