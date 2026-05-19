@@ -118,10 +118,9 @@ void sortBoolArray(int array[],int size){
      {
         if (array[i] == 0)
         {
-            array[i] == array[zero_index];
+            array[i] = array[zero_index];
             array[zero_index] = 0;
             zero_index++;
-
         }
         
      }
