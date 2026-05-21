@@ -1,0 +1,6 @@
+{
+    "code-runner.executorMap": {
+        "c": "cd $dir && gcc $dir*.c -o $fileNameWithoutExt && $dir$fileNameWithoutExt; rm -f $dir$fileNameWithoutExt" //notice the deletion of the file!!
+    },
+    "code-runner.runInTerminal": true
+}
