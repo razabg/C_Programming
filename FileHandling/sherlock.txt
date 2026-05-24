@@ -1,0 +1,7 @@
+127.0.0.1       localhost
+127.0.1.1       razabg.localdomain      razabg
+127.0.0.1       kafka
+127.0.0.1       redis
+127.0.0.1       postgres
+127.0.0.1       mongodb
+127.0.0.1       cassandra       
