@@ -1,5 +1,7 @@
 #define BITS_IN_BYTE 8
 
+// check each bit of a number if its on = 1 or off = 1
+
 int CountBit(unsigned char _num)
 {
     int count = 0;
