@@ -131,19 +131,19 @@ int checkBit(unsigned char num, int pos)
     return (num >> pos) & 1;
 }
 
-int main()
-{
-    unsigned char num = 0b10110010;
+// int main()
+// {
+//     unsigned char num = 0b10110010;
 
-    printf("Original:  ");
-    printBits(num);
-    printf("Set 3:     ");
-    printBits(setBit(num, 3));
-    printf("Clear 4:   ");
-    printBits(clearBit(num, 4));
-    printf("Toggle 7:  ");
-    printBits(toggleBit(num, 7));
-    printf("Bit 1:     %s\n", checkBit(num, 1) ? "ON" : "OFF");
+//     printf("Original:  ");
+//     printBits(num);
+//     printf("Set 3:     ");
+//     printBits(setBit(num, 3));
+//     printf("Clear 4:   ");
+//     printBits(clearBit(num, 4));
+//     printf("Toggle 7:  ");
+//     printBits(toggleBit(num, 7));
+//     printf("Bit 1:     %s\n", checkBit(num, 1) ? "ON" : "OFF");
 
-    return 0;
-}
+//     return 0;
+// }
