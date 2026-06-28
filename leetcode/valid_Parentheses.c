@@ -43,6 +43,26 @@ bool valid(char *str)
     return StackIsEmpty(stack);
 }
 
+
+int countBits(unsigned char num){
+
+    //0100 1100
+    //0000 0001
+    unsigned mask = 1;
+    int counterbit = 0;
+
+    while (num > 0)
+    {
+       
+       counterbit += (num & 1);
+       num = num >> 1;
+        
+    }
+
+    return counterbit;
+
+}
+
 int main()
 {
     // bool res = valid("{[(]}");
@@ -55,6 +75,7 @@ int main()
     char one = 'A';
     var = &one;
     printf("%c\n", *(char *)var);
+    printf("%d\n", countBits(76));
 
     return 0;
 }

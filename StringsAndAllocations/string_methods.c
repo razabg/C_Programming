@@ -147,7 +147,6 @@ int MyIToA(int _num, char *_buffer)
     return 1;
 }
 
-
 int ReverseWordsInString(char *_str)
 {
     if (_str == NULL)
@@ -178,15 +177,14 @@ int ReverseWordsInString(char *_str)
     }
 
     return 1;
-
 }
 
+// 5. In place
+int CountWordsInString(char *_str)
+{
 
-
- // 5. In place
-int CountWordsInString(char *_str){
-
-     if (_str == NULL) {
+    if (_str == NULL)
+    {
         return 0;
     }
 
@@ -194,25 +192,29 @@ int CountWordsInString(char *_str){
     int inWord = 0;
     int i = 0;
 
-    while (_str[i] != '\0') {
-        if (!isspace(_str[i])) {
-            if (!inWord) {
-                count++;      // entered a new word
+    while (_str[i] != '\0')
+    {
+        if (!isspace(_str[i]))
+        {
+            if (!inWord)
+            {
+                count++; // entered a new word
                 inWord = 1;
             }
-        } else {
-            inWord = 0;       // we're in a space
+        }
+        else
+        {
+            inWord = 0; // we're in a space
         }
         i++;
     }
 
     return count;
 
-
-    //not in place solution using strtok
-    // if (_str == NULL || strlen(_str) == 0) {
-    //     return 0;
-    // }
+    // not in place solution using strtok
+    //  if (_str == NULL || strlen(_str) == 0) {
+    //      return 0;
+    //  }
 
     // char copy[strlen(_str) + 1];
     // strcpy(copy, _str);
@@ -226,6 +228,4 @@ int CountWordsInString(char *_str){
     // }
 
     // return count;
-
-
 }
