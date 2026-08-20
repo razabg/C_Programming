@@ -34,7 +34,14 @@ int countBitsLUT(unsigned char num)
 
 int main()
 {
-    buildBitCountLUT();
-    printf("%d\n", countBitsLUT(0b01111110));
-    return 0;
+    // buildBitCountLUT();
+    // printf("%d\n", countBitsLUT(0b01111110));
+
+    int arr[3];
+    int arr2[3] = {1,2,4};
+
+    arr = arr2;
+
+
+     return 0;
 }

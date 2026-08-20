@@ -24,6 +24,11 @@ int main(void)
 
     for (int i = 0; i < NUM_THREADS; i++)
     {
+        // pthread_create(thread, attr, start_routine, arg):
+        //   thread        -> pthread_t out-param, filled with the new thread's ID
+        //   attr          -> NULL = default attributes (stack size, scheduling, etc.)
+        //   start_routine -> function the new thread runs: void *(*)(void *)
+        //   arg           -> single value passed to start_routine (here, the loop index)
         int status = pthread_create(&threadList[i], NULL, PrintFunc, (void *)(long)i);
         if (status != 0)
             fprintf(stderr, "pthread_create failed: %d\n", status);
