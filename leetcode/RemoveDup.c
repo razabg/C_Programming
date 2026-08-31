@@ -35,7 +35,10 @@ int main()
     // int nums[] = {0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 7, 8, 8, 8, 9, 9, 9};
     int nums[] = {0, 1, 2, 6, 7, 8, 9};
 
-    printf("%d\n", removeDuplicates(nums, sizeof(nums) / sizeof(nums[0])));
+    printf("%d\n", sizeof(nums) / sizeof(nums[0]));
+    printf("%d\n", sizeof(nums[0]));
+    printf("%d\n", sizeof(nums));
+
     return 0;
 }
 
